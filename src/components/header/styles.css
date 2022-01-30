@@ -1,0 +1,65 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid white;
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-cart {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+    .full-logo {
+        display: block;
+    }
+
+    .half-logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .full-logo {
+        display: none;
+    }
+
+    .half-logo {
+        display: block;
+    }
+}
+
+.icon_cart {
+    position: relative;
+}
+
+.cartCount {
+    position: absolute;
+    top: -10px;
+    left: 45px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

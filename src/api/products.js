@@ -2,78 +2,88 @@ const data = {
     products: [
     {
         id: 1,
-        code: 'AA00BB-Y1',
-        short_description: 'Some short text to describe item 1',
-        long_description: 'More elaborated description 1 which mentions specific details about the product and serves as a complete description of the item',
-        price: 25.10,
+        code: 'JBL-Q100-B',
+        short_description: 'JBL Quantum 100',
+        long_description: 'JBL Quantum 100 Gaming Headset',
+        price: 25.75,
         weight: 1.10,
         features: [
-            'This is the first feature of this product',
-            'This is the second feature of this product a little bit longer than the previous one',
-            'This is yet another feature of this product, would be the third one',
-            'And finally this is the fourth and last feature of this product'
+            'Be at the center of the game with JBL Quantum SOUND Signature',
+            'Play even longer with lightweight headband and memory foam ear cushions',
+            'Make your voice heard loud and clear with the detachable, voice focus directional boom mic',
+            'Compatible with all platforms via 3.5mm jack for PC, PlayStation, Xbox, Nintendo Switch, Mobile, Mac, and VR'
         ],
         specs: [
             {
-                name: 'First spec of product',
-                value: 'data one'
+                name: 'Headphone cable length (cm)',
+                value: '120'
             },
             {
-                name: 'Second spec of product',
-                value: 'data two'
+                name: 'Driver Size (mm)',
+                value: '3.94'
             },
             {
-                name: 'Third spec of product',
-                value: 'data three'
+                name: 'Driver sensitivity (db)',
+                value: '96'
             },
             {
-                name: 'Fourth spec of product',
-                value: 'data four'
+                name: 'Impedance',
+                value: '32'
+            },
+            {
+                name: 'Weight (oz)',
+                value: '7.7'
             }
         ],
         images: [
-            '../img/pimg_JBL_Quanatum_100_1.jpg',
-            '../img/pimg_JBL_Quanatum_100_2.jpg',
-            '../img/pimg_JBL_Quanatum_100_3.jpg',
-            '../img/pimg_JBL_Quanatum_100_4.jpg'
+            'images/pimg-JBL-Q100-B-0.jpg',
+            'images/pimg-JBL-Q100-B-1.jpg',
+            'images/pimg-JBL-Q100-B-2.jpg',
+            'images/pimg-JBL-Q100-B-3.jpg',
+            'images/pimg-JBL-Q100-B-4.jpg'
         ]
     },
     {
         id: 2,
-        code: 'AA00BB-Y2',
-        short_description: 'Some short text to describe item 2',
-        long_description: 'More elaborated description 2 which mentions specific details about the product and serves as a complete description of the item',
-        price: 25.20,
-        weight: 1.20,
+        code: 'UNN-SP9356-B',
+        short_description: 'BeatBox TWS Speaker',
+        long_description: 'Unno Techno BeatBox TWS Karaoke Speaker',
+        price: 32.75,
+        weight: 5,
         features: [
-            'This is the first feature of this product',
-            'This is the second feature of this product a little bit longer than the previous one',
-            'This is yet another feature of this product, would be the third one',
-            'And finally this is the fourth and last feature of this product'
+            'The BeatBox is so compact but yet powerful that none of your friends won\'t believe it.',
+            'Stream your favorite playlist, turn on its flashing RGB lights',
+            'Have a karaoke party that the whole block will remember but if that isn\'t enough',
+            'Wirelessly connect a second BeatBox and double the beat to make your walls to rumble.'
         ],
         specs: [
             {
-                name: 'First spec of product',
-                value: 'data one'
+                name: 'Power (PMPO)',
+                value: '1800W'
             },
             {
-                name: 'Second spec of product',
-                value: 'data two'
+                name: 'Active speaker',
+                value: '8"'
             },
             {
-                name: 'Third spec of product',
-                value: 'data three'
+                name: 'BT/TWS connection range (ft)',
+                value: '33'
             },
             {
-                name: 'Fourth spec of product',
-                value: 'data four'
+                name: 'Rechargeable battery',
+                value: '2200mAh'
+            },
+            {
+                name: 'Dimensions (in)',
+                value: '9.80 x 10.00 x 9.85'
             }
         ],
         images: [
-            '../img/pimg_JBL_Quanatum_100_1.jpg',
-            '../img/pimg_JBL_Quanatum_100_2.jpg',
-            '../img/pimg_JBL_Quanatum_100_3.jpg',
-            '../img/pimg_JBL_Quanatum_100_4.jpg'
+            'images/pimg-UNN-SP9356-B-0.jpg',
+            'images/pimg-UNN-SP9356-B-1.jpg',
+            'images/pimg-UNN-SP9356-B-2.jpg',
+            'images/pimg-UNN-SP9356-B-3.jpg',
+            'images/pimg-UNN-SP9356-B-4.jpg'
         ]
     }
 ]

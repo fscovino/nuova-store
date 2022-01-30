@@ -1,0 +1,47 @@
+footer {
+    width: 100%;
+    background: #1C364F;
+    border-top: 2px solid white;
+    z-index: 30;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.address ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.address ul li {
+    font-size: 1.15rem;
+    color: var(--color-font-light);
+}
+
+.product-link ul {
+    list-style-type: none;
+    color: var(--color-font-light);
+    margin: 0;
+    padding: 0;
+}
+
+.product-link ul li:first-child {
+    font-weight: 700;
+    font-size: 1.20rem;
+    color: var(--color-font-light);
+}
+
+.product-link ul li a {
+    text-decoration: none;
+    color: var(--color-font-light);
+}
+
+.product-link ul li a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    color: var(--color-font-light);
+    margin: 0;
+}
