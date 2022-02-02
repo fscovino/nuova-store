@@ -13,33 +13,57 @@ function App() {
 
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [cartOpen, setCartOpen] = useState(false);
 
 
   useEffect(() => {
     setProducts(api.getProducts());
   }, [products]);
 
+  
+ /* Add item to cart */
   const addItem = (product) => {
-    const temp = cart.map((item) => item.id === product.id ? item.qty += 1 : product);
-    console.log(temp);
-    setCart(temp);
+
+    // Verify if the product is already in the cart
+    const itemToIncrease = cart.find((item) => item.id === product.id);
+
+    if (itemToIncrease) {
+      const newCart = cart.map((item) => item.id === product.id ? {...item, qty: item.qty + 1}: item);
+      setCart(newCart);
+    } else {
+      const newCart = [...cart, {...product, qty: 1}];
+      setCart(newCart);
+    }
   }
 
+
+ /* Remove item from cart */
   const removeItem = (product) => {
-    
+    const itemToDecrease = cart.find(item => item.id === product.id);
+
+    if (itemToDecrease.qty > 1) {
+      const newCart = cart.map(item => item.id === product.id ? {...item, qty: item.qty - 1} : item);
+      setCart(newCart);
+    } else {
+      const newCart = cart.filter(item => item.id !== product.id);
+      setCart(newCart);
+    }
   }
 
-  const showCart = () => {
-    console.log('How cart');
+
+  /* Open Cart side window */
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+    console.log('clicking cart button');
   }
 
 
   return (
     <div className="App">
       <div className='app'>
-        <Header cartCount={cart.length} products={products} showCart={showCart} />
+        <Header cart={cart} products={products} toggleCart={toggleCart} />
         <Slider products={products} addItem={addItem} />
-        <SideCart cart={cart} addItem={addItem} removeItem={removeItem} />
+        {cartOpen && <SideCart cart={cart} addItem={addItem} removeItem={removeItem} toggleCart={toggleCart} />}
       </div>
       <Footer products={products} />
     </div>

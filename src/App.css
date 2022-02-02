@@ -3,10 +3,9 @@
 }
 
 .side {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 300px;
     height: 100vh;
     z-index: 20;
-    display: none; /*temporal*/
 }

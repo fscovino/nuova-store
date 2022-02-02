@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './styles.css';
 import full_logo from '../../img/logo.svg';
 import half_logo from '../../img/logo_shape.svg';
 import icon_cart from '../../img/icon_cart.svg';
 import icon_menu from '../../img/icon_menu.svg';
+import { useState } from 'react/cjs/react.development';
 
-function Header({ cartCount, showCart }) {
+function Header({ cart, toggleCart, products }) {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [itemCount, setItemCount] = useState(0);
+
+  
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  }
+
+
+  useEffect(() => {
+    let totalCount = 0;
+    cart.forEach(item => totalCount += item.qty);
+    setItemCount(totalCount);
+  }, [cart]);
+
 
   return (
     <header>
@@ -16,13 +33,21 @@ function Header({ cartCount, showCart }) {
             <img className='half-logo' src={half_logo} alt="Nuova Store logo" />
           </div>
           <div className='menu-cart'>
-            <div className='menu-icon icon_cart' onClick={showCart}>
+            <div className='menu-icon icon_cart' onClick={toggleCart}>
               <img src={icon_cart} alt="Shopphing Cart button" />
-              {cartCount > 0 && <span className='cartCount'>{cartCount}</span>}
+              {itemCount > 0 && <span className='cartCount'>{itemCount}</span>}
             </div>
             <div className='menu-icon icon_menu'>
-              <img src={icon_menu} alt="Menu button" />
+              <img src={icon_menu} alt="Menu button" onClick={toggleMenu}/>
             </div>
+
+            {menuOpen && (
+              <div className="menu-list">
+                <ul>
+                  {products.map((product, idx) => <li key={product.id} onClick={toggleMenu}><a type='button' data-bs-target='#maincarousel' data-bs-slide-to={idx} href=' '>{product.short_description}</a></li>)}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
     </header>

@@ -58,19 +58,6 @@
     border: 1px solid var(--color-primary);
 }
 
-@media screen and (max-width: 500px) {
-
-    #maincarousel > div.carousel-indicators {
-        top: 70px;
-    }
-
-    #maincarousel > div.carousel-indicators > button.active,
-    #maincarousel > div.carousel-indicators > button {
-        width: 7px;
-        height: 7px;
-    }
-}
-
 #maincarousel > button.carousel-control-prev,
 #maincarousel > button.carousel-control-next {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(117, 117, 117, 0.5));
@@ -83,4 +70,9 @@
 
 #maincarousel > button.carousel-control-next {
     border-left: 1px solid white;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(100%);
 }

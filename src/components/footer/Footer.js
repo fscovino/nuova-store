@@ -28,7 +28,7 @@ function Footer({ products }) {
             <div className="col-sm-12 col-md-6 product-link d-flex justify-content-sm-start justify-content-md-center py-4">
               <ul>
                 <li><strong>Feature Products</strong></li>
-                {products.map((product) => <li key={product.id}><a href=' '>{product.short_description}</a></li>)}
+                {products.map((product, idx) => <li key={product.id}><a type='button' data-bs-target='#maincarousel' data-bs-slide-to={idx} href=' '>{product.short_description}</a></li>)}
               </ul>
             </div>
             <div className="col-sm-12 col-md-3 py-4">
