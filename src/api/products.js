@@ -85,6 +85,92 @@ const data = {
             'images/pimg-UNN-SP9356-B-3.jpg',
             'images/pimg-UNN-SP9356-B-4.jpg'
         ]
+    },
+    {
+        id: 3,
+        code: 'AMF-GTS2-L',
+        short_description: 'Amazfit GTS-2',
+        long_description: 'Amazfit Smart Watch GTS-2 Square Shape',
+        price: 159.95,
+        weight: 1.1,
+        features: [
+            '3D Curved Bezel-less Design. All-round Health and Fitness Tracking',
+            'AMOLED screen that rivals the best displays in the world',
+            'Exquisitely crafted 3D curved glass shimmers like a piece of crystal jade',
+            'Choose from a broad range of watch face themes so that you\'re always in style'
+        ],
+        specs: [
+            {
+                name: 'Battery (mAh)',
+                value: '246'
+            },
+            {
+                name: 'WiFi',
+                value: 'Yes'
+            },
+            {
+                name: 'SpO2 meter',
+                value: 'Yes'
+            },
+            {
+                name: 'Water Resistance',
+                value: '5 ATM'
+            },
+            {
+                name: 'Dimensions (in)',
+                value: '9.80 x 10.00 x 9.85'
+            }
+        ],
+        images: [
+            'images/pimg-AMF-GTS2-L-0.jpg',
+            'images/pimg-AMF-GTS2-L-1.jpg',
+            'images/pimg-AMF-GTS2-L-2.jpg',
+            'images/pimg-AMF-GTS2-L-3.jpg',
+            'images/pimg-AMF-GTS2-L-4.jpg'
+        ]
+    },
+    {
+        id: 4,
+        code: 'MOT-ESC220-B',
+        short_description: 'Motorola Escape 220',
+        long_description: 'Motorola Stereo Headphones Escape 220',
+        price: 59.75,
+        weight: 4,
+        features: [
+            'Enjoy listening to your favorite audio tracks with these over-ear headphones. Housing 40mm sound drivers, these Bluetooth headphones deliver crystal clear audio',
+            'Wear these wireless headphones all day without feeling any ear or head discomfort. Its cushioned ear caps and adjustable head band ensure a soft and comfortable fit',
+            'Tired of tangled headphone wires? These over the ear headphones connect to your device via Bluetooth, allowing you to move freely while rocking out to your tunes',
+            'These wireless Bluetooth headphones feature an integrated microphone, which captures your voice loud and clear to ensure distortion-free conversations over the phone'
+        ],
+        specs: [
+            {
+                name: 'Fit Type',
+                value: 'Over-Ear'
+            },
+            {
+                name: 'Weight (lbs)',
+                value: '1'
+            },
+            {
+                name: 'Playtime (hrs)',
+                value: '24'
+            },
+            {
+                name: 'Passive Noise',
+                value: 'Yes'
+            },
+            {
+                name: 'Dimensions (in)',
+                value: '9.80 x 10.00 x 9.85'
+            }
+        ],
+        images: [
+            'images/pimg-MOT-ESC220-B-0.jpg',
+            'images/pimg-MOT-ESC220-B-1.jpg',
+            'images/pimg-MOT-ESC220-B-2.jpg',
+            'images/pimg-MOT-ESC220-B-3.jpg',
+            'images/pimg-MOT-ESC220-B-4.jpg'
+        ]
     }
 ]
 } 

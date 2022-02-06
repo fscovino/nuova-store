@@ -18,6 +18,7 @@ function App() {
 
   useEffect(() => {
     setProducts(api.getProducts());
+    setCart(JSON.parse(localStorage.getItem("nuova-cart")));
   }, [products]);
 
   
@@ -34,6 +35,9 @@ function App() {
       const newCart = [...cart, {...product, qty: 1}];
       setCart(newCart);
     }
+
+    // Store in localstorage
+    localStorage.setItem("nuova-cart", JSON.stringify(cart));
   }
 
 
@@ -48,13 +52,15 @@ function App() {
       const newCart = cart.filter(item => item.id !== product.id);
       setCart(newCart);
     }
+
+    // Store in localstorage
+    localStorage.setItem("nuova-cart", JSON.stringify(cart));
   }
 
 
   /* Open Cart side window */
   const toggleCart = () => {
     setCartOpen(!cartOpen);
-    console.log('clicking cart button');
   }
 
 
