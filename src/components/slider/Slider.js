@@ -78,7 +78,7 @@ function Slider({ products, addItem }) {
                           <a className="nav-link active" aria-current="true" href=" ">Specs</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="...">Reviews</a>
+                          <a className="nav-link" href=" ">Reviews</a>
                         </li>
                       </ul>
                     </div>

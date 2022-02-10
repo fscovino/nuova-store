@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './styles.css';
 import full_logo from '../../img/logo.svg';
 import half_logo from '../../img/logo_shape.svg';
 import icon_cart from '../../img/icon_cart.svg';
 import icon_menu from '../../img/icon_menu.svg';
-import { useState } from 'react/cjs/react.development';
+
 
 function Header({ cart, toggleCart, products }) {
 
@@ -20,7 +20,11 @@ function Header({ cart, toggleCart, products }) {
 
   useEffect(() => {
     let totalCount = 0;
-    cart.forEach(item => totalCount += item.qty);
+
+    if (cart) {
+      cart.forEach(item => totalCount += item.qty);
+    }
+    
     setItemCount(totalCount);
   }, [cart]);
 

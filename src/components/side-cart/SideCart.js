@@ -22,16 +22,20 @@ function SideCart({ cart, addItem, removeItem, toggleCart }) {
     let shipping = 0;
     let total = 0;
 
+    if (cart) {
     // Calculate subtotal
-    cart.forEach(item => subtotal += item.price * item.qty);
+      cart.forEach(item => subtotal += item.price * item.qty);
+    }
     setSubtotal(parseFloat(subtotal).toFixed(2));
 
     // Calculate taxes
     taxes = subtotal * 0.07;
     setTaxes(parseFloat(taxes).toFixed(2));
 
-    // Calculate shipping
-    cart.forEach(item => shipping += item.weight * 5.25);
+    if (cart) {
+      // Calculate shipping
+      cart.forEach(item => shipping += item.weight * 5.25);
+    }
     setShipping(parseFloat(shipping).toFixed(2));
 
     // Calculate total
