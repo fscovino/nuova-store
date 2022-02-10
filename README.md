@@ -24,7 +24,7 @@ npm install react react-dom bootstrap
 
 ## Screenshoot
 
-![Screenshoot](https://github.com/fscovino/kanban/blob/main/kanban_screenshot_1.png)
+![Screenshoot](https://github.com/fscovino/nuova-store/blob/main/screen-shot.png)
 
 ## Author
 
